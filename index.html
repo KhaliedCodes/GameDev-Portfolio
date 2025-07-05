@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom styles to match the theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+        }
+
+        .name-gradient {
+            background: -webkit-linear-gradient(45deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card {
+            background-color: #252525;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .tag {
+            background-color: #333;
+            color: #a0a0a0;
+        }
+
+        .icon-link {
+            transition: color 0.3s ease;
+        }
+
+        .icon-link:hover {
+            color: #3b82f6;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Header / Hero Section -->
+        <header class="hero-section text-center py-24 sm:py-32 rounded-b-3xl">
+            <div class="mx-auto">
+                <img class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-600 shadow-lg"
+                    src="./static/profile_picture.jpg" alt="Your profile picture">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+                    Hi, I'm <span class="name-gradient">Khaled Magdy</span>.
+                </h1>
+                <p class="mt-4 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    I'm a passionate game developer building immersive and interactive worlds.
+                </p>
+                <!-- Social Links -->
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://github.com/KhaliedCodes" class="text-gray-400 icon-link text-2xl" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/khaliedworks/" class="text-gray-400 icon-link text-2xl" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:khaliedmails@gmail.com" class="text-gray-400 icon-link text-2xl"
+                        aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- About Me Section -->
+            <section id="about" class="py-20 sm:py-24">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 section-title inline-block">About Me</h2>
+                    <div class="w-full text-gray-300 text-lg leading-relaxed space-y-4">
+                        <p>
+                            Hello! I'm a game developer dedicated to crafting engaging and memorable player experiences.
+                            My passion for video games started in childhood and has evolved into a professional drive to
+                            design, build, and polish interactive worlds.
+                        </p>
+                        <p>
+                            I thrive on the challenges of game development, from programming complex mechanics to
+                            optimizing performance. I enjoy collaborating in creative teams to bring ambitious ideas to
+                            life. When I'm not developing games, you'll find me playing them, exploring new game design
+                            concepts, or diving into the latest tech.
+                        </p>
+                        <p>Here are a few technologies I've been working with recently:</p>
+                        <ul class="grid grid-cols-2 gap-2 text-gray-400">
+                            <li class="flex items-center"><i class="fa-solid fa-gamepad text-blue-500 mr-2"></i> Unreal
+                                Engine</li>
+                            <li class="flex items-center"><i class="fa-brands fa-unity text-blue-500 mr-2"></i> Unity
+                            </li>
+                            <li class="flex items-center"><i class="fa-solid fa-file-code text-blue-500 mr-2"></i> C#
+                            </li>
+                            <li class="flex items-center"><i class="fa-solid fa-file-code text-blue-500 mr-2"></i> C++
+                            </li>
+                            <li class="flex items-center"><i class="fa-solid fa-file-code text-blue-500 mr-2"></i>
+                                TypeScript</li>
+                            <li class="flex items-center"><i class="fa-brands fa-git-alt text-blue-500 mr-2"></i> Git &
+                                GitHub</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="md:w-1/3 flex justify-center">
+                        <img src="https://placehold.co/400x400/252525/e0e0e0?text=GameDev"
+                            alt="Illustration of game development"
+                            class="rounded-lg shadow-xl w-full max-w-xs md:max-w-full">
+                    </div> -->
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-20 sm:py-24">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 section-title inline-block">My Work</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project Card 1 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-48 object-cover"
+                            src="./static/forknife_thumbnail.png"
+                            alt="Game Project 1 placeholder image">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-white">FORKNIFE</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                First person shooter with AI controlled enemies.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">Unity</span>
+                                <span class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">C#</span>
+                                <span
+                                    class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">Behaviour trees</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/KhaliedCodes/Forknife" class="text-gray-300 hover:text-blue-500 transition-colors duration-300"><i
+                                        class="fab fa-github mr-1"></i> Source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-48 object-cover"
+                            src="./static/SigmaJungle_thumbnail.png"
+                            alt="Game Project 2 placeholder image">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-white">Sigma jungle</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                2D side scroller platformer with combat, enemies and platforming.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">Unity</span>
+                                <span class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">C#</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/KhaliedCodes/SigmaJungle"
+                                    class="text-gray-300 hover:text-purple-500 transition-colors duration-300"><i
+                                        class="fab fa-github mr-1"></i> Source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-48 object-cover"
+                            src="./static/VR_thumbnail.png"
+                            alt="Game Project 3 placeholder image">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-white">VR shooting range</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                A short VR experience where you get to test your skills in a shooting range.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">Unity</span>
+                                <span class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">VR</span>
+                                <span
+                                    class="tag text-xs font-semibold inline-block py-1 px-2.5 rounded-full">C#</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/KhaliedCodes/Range-practice-VR"
+                                    class="text-gray-300 hover:text-emerald-500 transition-colors duration-300"><i
+                                        class="fab fa-github mr-1"></i> Source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-10 border-t border-gray-800 mt-16">
+            <p class="text-gray-500">
+                Designed & Built by Khaled Magdy
+            </p>
+            <p class="text-gray-600 text-sm mt-2">
+                &copy; 2024. All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
